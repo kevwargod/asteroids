@@ -50,7 +50,7 @@ def main():
             
             for bullet in shots:
                 if sprite.check_collision(bullet):
-                    sprite.kill()
+                    sprite.split()
                     bullet.kill()
         
         for sprite in drawable:
