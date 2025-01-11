@@ -47,6 +47,11 @@ def main():
             if sprite.check_collision(player1):
                 print("Game over!")
                 sys.exit()
+            
+            for bullet in shots:
+                if sprite.check_collision(bullet):
+                    sprite.kill()
+                    bullet.kill()
         
         for sprite in drawable:
             sprite.draw(screen)
